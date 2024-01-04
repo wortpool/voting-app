@@ -1,8 +1,10 @@
 import { useDispatch, useSelector } from "react-redux";
-import { PostItem, QuickPreview } from ".";
+
 import { useEffect, useState } from "react";
 import { useSearchParams } from "react-router-dom";
 import { fetchPostsThunk } from "../store/actions/postThunk";
+import PostItem from "./PostItem";
+import QuickPreview from "./QuickPreview";
 
 const PostsList = () => {
     const posts = useSelector(state => state.postSlice.posts) 

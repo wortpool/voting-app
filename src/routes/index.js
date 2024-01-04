@@ -1,8 +1,9 @@
 
-import { NotFound, PostsList } from "../components";
+
+import NotFound from "../components/NotFound";
+import PostsList from "../components/PostsList";
 import Main from "../pages/Main";
 import PostArticle from "../pages/PostArticle";
-
 
 export const routes = [
     {
@@ -12,12 +13,12 @@ export const routes = [
             {
                 path: "/results",
                 element: <PostsList />
-            }
+            },
+            {
+                path: "question/:id",
+                element: <PostArticle />
+            },
         ]
-    },
-    {
-        path: "question/:id",
-        element: <PostArticle />
     },
     {
         path: "*",
